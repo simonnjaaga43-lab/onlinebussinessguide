@@ -1,0 +1,569 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Online Business Guide | Build and Grow Your Business Online</title>
+
+  <meta name="description" content="Practical guides, honest reviews and digital tools to help beginners and small businesses in Kenya build and grow online.">
+
+  <meta name="keywords" content="online business Kenya, build a business website, digital tools, website hosting Kenya, online business guides">
+
+  <meta name="author" content="Online Business Guide">
+  <meta name="theme-color" content="#101810">
+
+  <style>
+    :root {
+      --dark: #101810;
+      --green: #276b46;
+      --light-green: #eaf2ec;
+      --cream: #f7f8f5;
+      --white: #ffffff;
+      --text: #263229;
+      --muted: #69736c;
+      --border: #e5e9e4;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1120px, 90%);
+      margin: auto;
+    }
+
+    /* Navigation */
+
+    header {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .logo {
+      font-size: 19px;
+      font-weight: 800;
+      color: var(--dark);
+      letter-spacing: -0.7px;
+    }
+
+    .logo span {
+      color: var(--green);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 25px;
+      list-style: none;
+      align-items: center;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .nav-links a:hover {
+      color: var(--green);
+    }
+
+    .nav-cta {
+      background: var(--dark);
+      color: white !important;
+      padding: 11px 18px;
+      border-radius: 5px;
+    }
+
+    /* Hero */
+
+    .hero {
+      background: var(--cream);
+      padding: 105px 0 100px;
+    }
+
+    .hero-content {
+      max-width: 760px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      color: var(--green);
+      background: var(--light-green);
+      padding: 6px 13px;
+      border-radius: 30px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 25px;
+    }
+
+    h1 {
+      font-size: clamp(40px, 6vw, 68px);
+      line-height: 1.12;
+      letter-spacing: -2.5px;
+      color: var(--dark);
+      margin-bottom: 24px;
+    }
+
+    h1 span {
+      color: var(--green);
+    }
+
+    .hero p {
+      color: var(--muted);
+      font-size: 18px;
+      max-width: 650px;
+      margin-bottom: 32px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 14px 24px;
+      background: var(--green);
+      color: white;
+      border-radius: 5px;
+      font-size: 14px;
+      font-weight: 700;
+      transition: 0.2s;
+    }
+
+    .button:hover {
+      background: var(--dark);
+      transform: translateY(-2px);
+    }
+
+    .hero-note {
+      margin-top: 24px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    /* General sections */
+
+    section {
+      padding: 85px 0;
+    }
+
+    .section-heading {
+      max-width: 650px;
+      margin-bottom: 40px;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(28px, 4vw, 40px);
+      line-height: 1.2;
+      letter-spacing: -1px;
+      color: var(--dark);
+      margin-bottom: 13px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+    }
+
+    /* Categories */
+
+    .categories {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .category {
+      border: 1px solid var(--border);
+      padding: 26px 22px;
+      border-radius: 8px;
+      transition: 0.2s;
+    }
+
+    .category:hover {
+      border-color: var(--green);
+      transform: translateY(-4px);
+    }
+
+    .category-number {
+      font-size: 13px;
+      color: var(--green);
+      font-weight: 800;
+      margin-bottom: 20px;
+    }
+
+    .category h3 {
+      font-size: 18px;
+      color: var(--dark);
+      margin-bottom: 10px;
+    }
+
+    .category p {
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    /* Guides */
+
+    .guides {
+      background: var(--cream);
+    }
+
+    .guide-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .guide {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 30px;
+    }
+
+    .guide-label {
+      color: var(--green);
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .guide h3 {
+      font-size: 21px;
+      line-height: 1.4;
+      margin: 14px 0;
+      color: var(--dark);
+    }
+
+    .guide p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .guide-status {
+      display: inline-block;
+      margin-top: 20px;
+      color: var(--green);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    /* Mission */
+
+    .mission {
+      background: var(--dark);
+      color: white;
+      text-align: center;
+    }
+
+    .mission h2 {
+      font-size: clamp(28px, 4vw, 42px);
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+
+    .mission p {
+      color: #c6d0c7;
+      max-width: 680px;
+      margin: auto;
+      font-size: 16px;
+    }
+
+    /* Footer */
+
+    footer {
+      padding: 35px 0;
+      background: #0a100b;
+      color: #b5c0b7;
+      font-size: 13px;
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    footer strong {
+      color: white;
+    }
+
+    /* Mobile */
+
+    @media (max-width: 800px) {
+      .categories {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .nav-links {
+        gap: 12px;
+        font-size: 12px;
+      }
+
+      .nav-cta {
+        display: none;
+      }
+    }
+
+    @media (max-width: 520px) {
+      nav {
+        padding: 16px 0;
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .nav-links {
+        flex-wrap: wrap;
+      }
+
+      .hero {
+        padding: 75px 0;
+      }
+
+      .categories,
+      .guide-grid {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 65px 0;
+      }
+
+      h1 {
+        letter-spacing: -1.5px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="container">
+      <nav>
+        <a href="#" class="logo">
+          ONLINE BUSINESS <span>GUIDE.</span>
+        </a>
+
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#categories">Explore</a></li>
+          <li><a href="#guides">Guides</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero" id="home">
+      <div class="container">
+        <div class="hero-content">
+
+          <span class="eyebrow">
+            Practical knowledge. Real progress.
+          </span>
+
+          <h1>
+            Build your business online.
+            <span>Start with what you have.</span>
+          </h1>
+
+          <p>
+            Starting an online business or taking your existing
+            business online shouldn't feel complicated.
+            Find practical guides, honest tool comparisons and
+            useful resources to help you make better decisions
+            and grow with confidence.
+          </p>
+
+          <a href="#categories" class="button">
+            Explore Our Guides →
+          </a>
+
+          <div class="hero-note">
+            Made for beginners and small businesses in Kenya and beyond.
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="categories">
+      <div class="container">
+
+        <div class="section-heading">
+          <span class="eyebrow">Explore the website</span>
+          <h2>What would you like to learn?</h2>
+          <p>
+            Whether you're starting from scratch or improving
+            an existing business, find a practical place to begin.
+          </p>
+        </div>
+
+        <div class="categories">
+
+          <article class="category">
+            <div class="category-number">01 / BUILD</div>
+            <h3>Build Online</h3>
+            <p>
+              Learn website creation, domains, hosting,
+              WordPress and how to establish your online presence.
+            </p>
+          </article>
+
+          <article class="category">
+            <div class="category-number">02 / TOOLS</div>
+            <h3>Digital Tools</h3>
+            <p>
+              Discover useful software, platforms and
+              digital tools for running your business.
+            </p>
+          </article>
+
+          <article class="category">
+            <div class="category-number">03 / BUSINESS</div>
+            <h3>Online Business</h3>
+            <p>
+              Explore online selling, business models,
+              marketing and practical growth strategies.
+            </p>
+          </article>
+
+          <article class="category">
+            <div class="category-number">04 / LEARN</div>
+            <h3>Learn & Grow</h3>
+            <p>
+              Develop digital skills and discover
+              learning resources for your next step.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="guides" id="guides">
+      <div class="container">
+
+        <div class="section-heading">
+          <span class="eyebrow">Start here</span>
+          <h2>Practical guides for your next step.</h2>
+          <p>
+            We're building a library of useful resources
+            to help you make informed decisions.
+          </p>
+        </div>
+
+        <div class="guide-grid">
+
+          <article class="guide">
+            <span class="guide-label">Website creation</span>
+            <h3>
+              How to Start a Business Website in Kenya
+            </h3>
+            <p>
+              Understand the basic steps, tools and decisions
+              involved in taking your business online.
+            </p>
+            <span class="guide-status">Guide coming soon</span>
+          </article>
+
+          <article class="guide">
+            <span class="guide-label">Business costs</span>
+            <h3>
+              How Much Does It Cost to Build a Website in Kenya?
+            </h3>
+            <p>
+              Understand domain, hosting, design and other
+              costs before investing in your website.
+            </p>
+            <span class="guide-status">Guide coming soon</span>
+          </article>
+
+          <article class="guide">
+            <span class="guide-label">Web hosting</span>
+            <h3>
+              How to Choose Web Hosting as a Beginner
+            </h3>
+            <p>
+              Learn what hosting means and what to consider
+              before choosing a provider.
+            </p>
+            <span class="guide-status">Guide coming soon</span>
+          </article>
+
+          <article class="guide">
+            <span class="guide-label">Digital business</span>
+            <h3>
+              How to Take Your Small Business Online
+            </h3>
+            <p>
+              Explore practical ways to establish your
+              online presence without unnecessary spending.
+            </p>
+            <span class="guide-status">Guide coming soon</span>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="mission" id="about">
+      <div class="container">
+        <h2>Better decisions begin with better information.</h2>
+        <p>
+          Online Business Guide exists to make digital knowledge
+          easier to understand and apply. We believe that
+          building online should be accessible, practical and
+          possible one step at a time.
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container footer-content">
+      <div>
+        <strong>ONLINE BUSINESS GUIDE.</strong>
+        <p>Practical knowledge for building online.</p>
+      </div>
+
+      <div>
+        © 2026 Online Business Guide. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
